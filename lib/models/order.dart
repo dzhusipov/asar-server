@@ -10,7 +10,7 @@ class Order {
   final int? currentMoney;
   final int? userId;
   final String? username;
-  final List<String>? tags;
+  final String? tags;
 
   Order({
     this.id,
@@ -41,6 +41,6 @@ class Order {
         currentMoney: json["current_money"],
         userId: json["user_id"],
         username: json["username"],
-        tags: List<String>.from(json["tags"].map((x) => x)),
+        tags: json["tags"],
       );
 }
